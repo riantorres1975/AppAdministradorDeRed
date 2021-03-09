@@ -25,7 +25,9 @@ public class InterfazAppController implements Initializable {
     }    
     
     
-    ///comentario de prueba rama_JR
-    //ksjdks
+    ///comentario de prueba rama_JR    
     
+    public void prueba(){
+        
+    }
 }
