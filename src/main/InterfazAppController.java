@@ -34,8 +34,5 @@ public class InterfazAppController implements Initializable {
 	}
         
         //prueba rama_JR
-        
-        //prueba marge xD
-	
 
 }
