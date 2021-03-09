@@ -23,11 +23,5 @@ public class InterfazAppController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
-    
-    ///comentario de prueba rama_JR    
-    
-    public void prueba(){
-        
-    }
+
 }
