@@ -33,6 +33,4 @@ public class InterfazAppController implements Initializable {
 		}
 	}
         
-        //prueba rama_JR
-
 }
