@@ -54,6 +54,7 @@
 #inventario{
     -fx-border-color:#28B463;
 }
+
 #inventario:hover{
     -fx-background-color:#28B463;
     -fx-border-color:#28B463;

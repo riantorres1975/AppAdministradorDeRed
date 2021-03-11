@@ -28,8 +28,7 @@ public class HomepageController implements Initializable {
 
     @FXML
     private JFXButton search;
-    @FXML
-    private JFXButton inventario;
+
     @FXML
     private JFXButton ajustes;
     @FXML
@@ -38,6 +37,8 @@ public class HomepageController implements Initializable {
     private JFXButton bugs;
     @FXML
     private FontAwesomeIconView img_bug;
+    @FXML
+    private JFXButton inventario;
 
     /**
      * Initializes the controller class.
@@ -49,46 +50,46 @@ public class HomepageController implements Initializable {
 
     @FXML
     private void search_dispo(ActionEvent ev) throws IOException {
-        Stage primaryStage = new Stage();
-        Parent raiz = FXMLLoader.load(getClass().getResource("lo de buscar dispo.fxml"));
-        Scene escena = new Scene(raiz);
-        primaryStage.setTitle("LOCALIZAR DISPOSITIVO");
-        primaryStage.setScene(escena);
-        primaryStage.show();
-        ((Node) (ev.getSource())).getScene().getWindow().hide();/* para esconder la otra pantalla*/
+//        Stage primaryStage = new Stage();
+//        Parent raiz = FXMLLoader.load(getClass().getResource("lo de buscar dispo.fxml"));
+//        Scene escena = new Scene(raiz);
+//        primaryStage.setTitle("LOCALIZAR DISPOSITIVO");
+//        primaryStage.setScene(escena);
+//        primaryStage.show();
+//        ((Node) (ev.getSource())).getScene().getWindow().hide();/* para esconder la otra pantalla*/
     }
 
     @FXML
     private void ir_inventario(ActionEvent event) throws IOException {
-        Stage primaryStage = new Stage();
-        Parent raiz = FXMLLoader.load(getClass().getResource("inventario.fxml"));
-        Scene escena = new Scene(raiz);
-        primaryStage.setTitle("INVENTARIO");
-        primaryStage.setScene(escena);
-        primaryStage.show();
-        ((Node) (event.getSource())).getScene().getWindow().hide();/* para esconder la otra pantalla*/
+//        Stage primaryStage = new Stage();
+//        Parent raiz = FXMLLoader.load(getClass().getResource("inventario.fxml"));
+//        Scene escena = new Scene(raiz);
+//        primaryStage.setTitle("INVENTARIO");
+//        primaryStage.setScene(escena);
+//        primaryStage.show();
+//        ((Node) (event.getSource())).getScene().getWindow().hide();/* para esconder la otra pantalla*/
     }
 
     @FXML
     private void ir_ajustes(ActionEvent event) throws IOException {
-        Stage primaryStage = new Stage();
-        Parent raiz = FXMLLoader.load(getClass().getResource("AJUSTES.fxml"));
-        Scene escena = new Scene(raiz);
-        primaryStage.setTitle("AJUSTES");
-        primaryStage.setScene(escena);
-        primaryStage.show();
-        ((Node) (event.getSource())).getScene().getWindow().hide();/* para esconder la otra pantalla*/
+//        Stage primaryStage = new Stage();
+//        Parent raiz = FXMLLoader.load(getClass().getResource("AJUSTES.fxml"));
+//        Scene escena = new Scene(raiz);
+//        primaryStage.setTitle("AJUSTES");
+//        primaryStage.setScene(escena);
+//        primaryStage.show();
+//        ((Node) (event.getSource())).getScene().getWindow().hide();/* para esconder la otra pantalla*/
     }
 
     @FXML
     private void registro_fallas(ActionEvent event) throws IOException {
-        Stage primaryStage = new Stage();
-        Parent raiz = FXMLLoader.load(getClass().getResource("FALLAS.fxml"));
-        Scene escena = new Scene(raiz);
-        primaryStage.setTitle("FALLAS");
-        primaryStage.setScene(escena);
-        primaryStage.show();
-        ((Node) (event.getSource())).getScene().getWindow().hide();/* para esconder la otra pantalla*/
+//        Stage primaryStage = new Stage();
+//        Parent raiz = FXMLLoader.load(getClass().getResource("FALLAS.fxml"));
+//        Scene escena = new Scene(raiz);
+//        primaryStage.setTitle("FALLAS");
+//        primaryStage.setScene(escena);
+//        primaryStage.show();
+//        ((Node) (event.getSource())).getScene().getWindow().hide();/* para esconder la otra pantalla*/
     }
 
 }

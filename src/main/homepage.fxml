@@ -25,7 +25,7 @@
             <Font size="14.0" />
          </font>
          <graphic>
-            <FontAwesomeIconView fx:id="inventario" glyphName="BRIEFCASE" size="25" />
+            <FontAwesomeIconView glyphName="BRIEFCASE" size="25" />
          </graphic>
       </JFXButton>
       <JFXButton fx:id="ajustes" layoutX="66.0" layoutY="325.0" onAction="#ir_ajustes" prefHeight="37.0" prefWidth="208.0" text="Ajustes">
@@ -33,7 +33,7 @@
             <Font size="14.0" />
          </font>
          <graphic>
-            <FontAwesomeIconView fx:id="ajustes" glyphName="COGS" size="25" />
+            <FontAwesomeIconView glyphName="COGS" size="25" />
          </graphic>
       </JFXButton>
       <FontAwesomeIconView fx:id="home" glyphName="HOME" layoutX="143.0" layoutY="75.0" size="60" />
