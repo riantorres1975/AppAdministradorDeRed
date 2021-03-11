@@ -60,7 +60,7 @@ public class ConfiguracionController implements Initializable {
 
     public void BuscarDipos() {
 
-        if (dispostivos.indexOf(Integer.parseInt(txt_ID_Dipositivo.getText())-1) !=-1) {
+        if (dispostivos.indexOf(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1) != -1) {
             datos = dispostivos.get(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1).toString();
             historialConfig.setText(datos);
         } else {
@@ -70,6 +70,20 @@ public class ConfiguracionController implements Initializable {
 
         }
         txt_ID_Dipositivo.setText(" ");
+    }
+
+    public void BorrarDipositivo() {
+        if (dispostivos.indexOf(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1) != -1) {
+            datos = dispostivos.get(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1).toString();
+            historialConfig.setText(datos);
+        } else {
+            System.out.println("No se encontro..!" + dispostivos.size());
+            historialConfig.clear();
+            mostrarDipositivos();
+
+        }
+        txt_ID_Dipositivo.setText(" ");
+
     }
 
     //Método para leer coches e introducirlos en el array
