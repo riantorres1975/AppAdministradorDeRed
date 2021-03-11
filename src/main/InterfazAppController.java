@@ -31,6 +31,5 @@ public class InterfazAppController implements Initializable {
 		for(int i= 0; i<10; i++){
 			System.out.println("prueba con el merge");
 		}
-	}
-      //Pruba merge  
+	} 
 }
