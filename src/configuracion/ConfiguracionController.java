@@ -33,20 +33,49 @@ public class ConfiguracionController implements Initializable {
     @FXML
     TextField txt_configDipositivo;
     @FXML
+    TextField txt_ID_Dipositivo;
+    @FXML
     Button btnAgreagr;
 
     int contador = 0;
+    String datos = "";
+
     public void btnAgregar() {
+
         agregarConfiguracion();
         mostrarDipositivos();
+        LimpiarTextField();
         contador++;
-        
 
+    }
+
+    public void LimpiarTextField() {
+
+        txt_TipoDeipositivo.setText(" ");
+        txt_configDipositivo.setText(" ");
+        txt_modeloDipostipo.setText(" ");
+        txt_ipDispositivo.setText(" ");
+
+    }
+
+
+    public void BuscarDipos() {
+        
+   
+        if (dispostivos.size() > 0) {
+           datos = dispostivos.get(Integer.parseInt(txt_ID_Dipositivo.getText())-1).toString();
+           historialConfig.setText(datos);
+           System.out.println("Si..!" + dispostivos.size());
+        } else {
+            System.out.println("No se encontro..!"  + dispostivos.size());
+            historialConfig.clear();
+            mostrarDipositivos();
+        
+        }
     }
 
     //Método para leer coches e introducirlos en el array
     public void agregarConfiguracion() {
-
 
         String ip_Dispositivo;
         String configuracion;
@@ -71,23 +100,20 @@ public class ConfiguracionController implements Initializable {
 
         //se añade el objeto al final del array
         dispostivos.add(aux);
+
     }//fin método 
-    String datos="";
 
     public void mostrarDipositivos() {
 
         for (int i = contador; i < dispostivos.size(); i++) {
             //System.out.println(dispostivos.get(i));  //se invoca el método toString de la clase Dipos
-            datos+= "\n Dipositivo ID: " + String.valueOf(contador + 1);
+            datos += "\n Dipositivo ID: " + String.valueOf(contador + 1);
             datos += dispostivos.get(i).toString();
             datos += "\n -----------------------------------------------------------------------------------------";
         }
-      
-        
+
         historialConfig.setText(datos);
     }//fin de metodo
-    
-
 
     /**
      * Initializes the controller class.
