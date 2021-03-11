@@ -69,6 +69,7 @@ public class ConfiguracionController implements Initializable {
             mostrarDipositivos();
 
         }
+        txt_ID_Dipositivo.setText(" ");
     }
 
     //Método para leer coches e introducirlos en el array
