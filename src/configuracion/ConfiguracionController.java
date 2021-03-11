@@ -86,7 +86,7 @@ public class ConfiguracionController implements Initializable {
 
     }
 
-    //Método para leer coches e introducirlos en el array
+
     public void agregarConfiguracion() {
 
         int ID_Dispositivo;
