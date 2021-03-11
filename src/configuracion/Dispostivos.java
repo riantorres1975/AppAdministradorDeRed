@@ -56,7 +56,7 @@ public class Dispostivos {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("\n ID Dispositivo ");
+        sb.append("\n ID Dispositivo: ");
         sb.append(ID_Dipositivo);
         sb.append("\n Modelo de dipositivo: ");
         sb.append(modeloDipositivo);
