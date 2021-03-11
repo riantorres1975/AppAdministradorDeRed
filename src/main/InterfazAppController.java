@@ -25,13 +25,12 @@ public class InterfazAppController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
-    ///comentario de prueba rama_JR
-    //PRUEBA 2
-    
+
 	@FXML
 	public void probarBoton(ActionEvent ev){
-		System.out.println("Si jaló");
+		for(int i= 0; i<10; i++){
+			System.out.println("prueba con el merge");
+		}
 	}
-	
+      //Pruba merge  
 }
