@@ -74,11 +74,11 @@ public class ConfiguracionController implements Initializable {
 
     public void BorrarDipositivo() {
         if (dispostivos.indexOf(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1) != -1) {
-            datos = dispostivos.get(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1).toString();
-            historialConfig.setText(datos);
+            dispostivos.remove(txt_ID_Dipositivo.getText());
+            System.out.println("Borrado");
+            mostrarDipositivos();
         } else {
             System.out.println("No se encontro..!" + dispostivos.size());
-            historialConfig.clear();
             mostrarDipositivos();
 
         }
