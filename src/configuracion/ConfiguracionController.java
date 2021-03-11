@@ -60,7 +60,7 @@ public class ConfiguracionController implements Initializable {
 
     public void BuscarDipos() {
 
-        if (dispostivos.indexOf(txt_ID_Dipositivo) !=-1) {
+        if (dispostivos.indexOf(Integer.parseInt(txt_ID_Dipositivo.getText())-1) !=-1) {
             datos = dispostivos.get(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1).toString();
             historialConfig.setText(datos);
         } else {
