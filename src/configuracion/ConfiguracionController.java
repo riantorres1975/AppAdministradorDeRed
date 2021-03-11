@@ -58,25 +58,24 @@ public class ConfiguracionController implements Initializable {
 
     }
 
-
     public void BuscarDipos() {
-        
-   
+
         if (dispostivos.size() > 0) {
-           datos = dispostivos.get(Integer.parseInt(txt_ID_Dipositivo.getText())-1).toString();
-           historialConfig.setText(datos);
-           System.out.println("Si..!" + dispostivos.size());
+            datos = dispostivos.get(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1).toString();
+            historialConfig.setText(datos);
+            System.out.println("Si..!" + dispostivos.size());
         } else {
-            System.out.println("No se encontro..!"  + dispostivos.size());
+            System.out.println("No se encontro..!" + dispostivos.size());
             historialConfig.clear();
             mostrarDipositivos();
-        
+
         }
     }
 
     //Método para leer coches e introducirlos en el array
     public void agregarConfiguracion() {
 
+        String ID_Dispositivo;
         String ip_Dispositivo;
         String configuracion;
         String modeloDipositivo;
@@ -85,6 +84,7 @@ public class ConfiguracionController implements Initializable {
         //Variable auxiliar que contendrá la referencia a cada dipositivo nuevo.
         Dispostivos aux;
 
+        ID_Dispositivo = String.valueOf(contador);
         ip_Dispositivo = txt_ipDispositivo.getText();
         configuracion = txt_configDipositivo.getText();
         modeloDipositivo = txt_modeloDipostipo.getText();
@@ -107,7 +107,7 @@ public class ConfiguracionController implements Initializable {
 
         for (int i = contador; i < dispostivos.size(); i++) {
             //System.out.println(dispostivos.get(i));  //se invoca el método toString de la clase Dipos
-            datos += "\n Dipositivo ID: " + String.valueOf(contador + 1);
+            //datos += "\n Dipositivo ID: " + String.valueOf(contador + 1);
             datos += dispostivos.get(i).toString();
             datos += "\n -----------------------------------------------------------------------------------------";
         }

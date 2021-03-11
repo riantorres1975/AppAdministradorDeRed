@@ -10,6 +10,15 @@ public class Dispostivos {
     private String configuracion;
     private String modeloDipositivo;
     private String tipoDispositivo;
+    private String ID_Dipositivo;
+
+    public String getID_Dipositivo() {
+        return ID_Dipositivo;
+    }
+
+    public void setID_Dipositivo(String ID_Dipositivo) {
+        this.ID_Dipositivo = ID_Dipositivo;
+    }
 
     public void setIp_Dispositivo(String ip_Dispositivo) {
         this.ip_Dispositivo = ip_Dispositivo;
@@ -47,6 +56,8 @@ public class Dispostivos {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
+        sb.append("\n ID Dispositivo ");
+        sb.append(ID_Dipositivo);
         sb.append("\n Modelo de dipositivo: ");
         sb.append(modeloDipositivo);
         sb.append("\n Tipo de Dispositivo: ");
@@ -55,7 +66,7 @@ public class Dispostivos {
         sb.append(ip_Dispositivo);
         sb.append("\n Configuración: ");
         sb.append(configuracion);
-        ;
+
         return sb.toString();
     }
 
