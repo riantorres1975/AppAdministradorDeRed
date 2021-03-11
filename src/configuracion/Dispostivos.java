@@ -60,7 +60,7 @@ public class Dispostivos {
         sb.append(ID_Dipositivo);
         sb.append("\n Modelo de dipositivo: ");
         sb.append(modeloDipositivo);
-        sb.append("\n Tipo de Dispositivo: ");
+        sb.append("\n Tipo de Dispositivo:) ");
         sb.append(tipoDispositivo);
         sb.append("\n Ip Dipositivo: ");
         sb.append(ip_Dispositivo);
