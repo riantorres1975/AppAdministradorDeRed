@@ -30,11 +30,5 @@ public class InterfazAppController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-	@FXML
-	public void probarBoton(ActionEvent ev){
-		for(int i= 0; i<10; i++){
-			System.out.println("prueba con el merge");
-		}
-	} 
+    }
 }
