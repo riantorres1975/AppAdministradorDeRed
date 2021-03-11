@@ -106,7 +106,6 @@ public class ConfiguracionController implements Initializable {
     public void mostrarDipositivos() {
 
         for (int i = contador; i < dispostivos.size(); i++) {
-            System.out.println( dispostivos.size());
             //System.out.println(dispostivos.get(i));  //se invoca el método toString de la clase Dipos
             //datos += "\n Dipositivo ID: " + String.valueOf(contador + 1);
             datos += dispostivos.get(i).toString();
