@@ -11,7 +11,7 @@ public class main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Parent raiz = FXMLLoader.load(getClass().getResource("interfazApp.fxml"));
+		Parent raiz = FXMLLoader.load(getClass().getResource("/LocalizarDispositivos/LocalizarDispositivosFXML.fxml"));
 		Scene escena = new Scene(raiz);
 		primaryStage.setScene(escena);
 		primaryStage.show();
