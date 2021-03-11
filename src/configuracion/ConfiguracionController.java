@@ -33,21 +33,63 @@ public class ConfiguracionController implements Initializable {
     @FXML
     TextField txt_configDipositivo;
     @FXML
+    TextField txt_ID_Dipositivo;
+    @FXML
     Button btnAgreagr;
 
     int contador = 0;
+    String datos = "";
+
     public void btnAgregar() {
+
         agregarConfiguracion();
         mostrarDipositivos();
+        LimpiarTextField();
         contador++;
-        
+
+    }
+
+    public void LimpiarTextField() {
+
+        txt_TipoDeipositivo.setText(" ");
+        txt_configDipositivo.setText(" ");
+        txt_modeloDipostipo.setText(" ");
+        txt_ipDispositivo.setText(" ");
+
+    }
+
+    public void BuscarDipos() {
+
+        if (dispostivos.indexOf(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1) != -1) {
+            datos = dispostivos.get(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1).toString();
+            historialConfig.setText(datos);
+        } else {
+            System.out.println("No se encontro..!" + dispostivos.size());
+            historialConfig.clear();
+            mostrarDipositivos();
+
+        }
+        txt_ID_Dipositivo.setText(" ");
+    }
+
+    public void BorrarDipositivo() {
+        if (dispostivos.indexOf(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1) != -1) {
+            dispostivos.remove(txt_ID_Dipositivo.getText());
+            System.out.println("Borrado");
+            mostrarDipositivos();
+        } else {
+            System.out.println("No se encontro..!" + dispostivos.size());
+            mostrarDipositivos();
+
+        }
+        txt_ID_Dipositivo.setText(" ");
 
     }
 
     //Método para leer coches e introducirlos en el array
     public void agregarConfiguracion() {
 
-        //Declaración de variables para leer los datos de los coches
+        int ID_Dispositivo;
         String ip_Dispositivo;
         String configuracion;
         String modeloDipositivo;
@@ -56,6 +98,7 @@ public class ConfiguracionController implements Initializable {
         //Variable auxiliar que contendrá la referencia a cada dipositivo nuevo.
         Dispostivos aux;
 
+        ID_Dispositivo = contador;
         ip_Dispositivo = txt_ipDispositivo.getText();
         configuracion = txt_configDipositivo.getText();
         modeloDipositivo = txt_modeloDipostipo.getText();
@@ -64,6 +107,7 @@ public class ConfiguracionController implements Initializable {
         aux = new Dispostivos();
 
         //se asignan valores a los atributos del nuevo objeto
+        aux.setID_Dipositivo(ID_Dispositivo);
         aux.setIp_Dispositivo(ip_Dispositivo);
         aux.setConfiguracion(configuracion);
         aux.setModeloDipositivo(modeloDipositivo);
@@ -71,23 +115,20 @@ public class ConfiguracionController implements Initializable {
 
         //se añade el objeto al final del array
         dispostivos.add(aux);
+
     }//fin método 
-    String datos="";
 
     public void mostrarDipositivos() {
 
         for (int i = contador; i < dispostivos.size(); i++) {
             //System.out.println(dispostivos.get(i));  //se invoca el método toString de la clase Dipos
-            datos+= "\n Dipositivo ID: " + String.valueOf(contador + 1);
+            //datos += "\n Dipositivo ID: " + String.valueOf(contador + 1);
             datos += dispostivos.get(i).toString();
             datos += "\n -----------------------------------------------------------------------------------------";
         }
-      
-        
+
         historialConfig.setText(datos);
     }//fin de metodo
-    
-
 
     /**
      * Initializes the controller class.
