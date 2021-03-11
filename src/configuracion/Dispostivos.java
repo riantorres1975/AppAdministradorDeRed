@@ -10,13 +10,13 @@ public class Dispostivos {
     private String configuracion;
     private String modeloDipositivo;
     private String tipoDispositivo;
-    private String ID_Dipositivo;
+    private int ID_Dipositivo;
 
-    public String getID_Dipositivo() {
+    public int getID_Dipositivo() {
         return ID_Dipositivo;
     }
 
-    public void setID_Dipositivo(String ID_Dipositivo) {
+    public void setID_Dipositivo(int ID_Dipositivo) {
         this.ID_Dipositivo = ID_Dipositivo;
     }
 

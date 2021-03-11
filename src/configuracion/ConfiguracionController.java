@@ -75,7 +75,7 @@ public class ConfiguracionController implements Initializable {
     //Método para leer coches e introducirlos en el array
     public void agregarConfiguracion() {
 
-        String ID_Dispositivo="";
+        int ID_Dispositivo;
         String ip_Dispositivo;
         String configuracion;
         String modeloDipositivo;
@@ -84,7 +84,7 @@ public class ConfiguracionController implements Initializable {
         //Variable auxiliar que contendrá la referencia a cada dipositivo nuevo.
         Dispostivos aux;
 
-        ID_Dispositivo = String.valueOf(contador);
+        ID_Dispositivo = contador;
         ip_Dispositivo = txt_ipDispositivo.getText();
         configuracion = txt_configDipositivo.getText();
         modeloDipositivo = txt_modeloDipostipo.getText();
@@ -93,6 +93,7 @@ public class ConfiguracionController implements Initializable {
         aux = new Dispostivos();
 
         //se asignan valores a los atributos del nuevo objeto
+        aux.setID_Dipositivo(ID_Dispositivo);
         aux.setIp_Dispositivo(ip_Dispositivo);
         aux.setConfiguracion(configuracion);
         aux.setModeloDipositivo(modeloDipositivo);
