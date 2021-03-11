@@ -47,7 +47,7 @@ public class ConfiguracionController implements Initializable {
     //Método para leer coches e introducirlos en el array
     public void agregarConfiguracion() {
 
-        //Declaración de variables para leer los datos de los coches
+
         String ip_Dispositivo;
         String configuracion;
         String modeloDipositivo;
