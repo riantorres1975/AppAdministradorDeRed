@@ -10,13 +10,13 @@ public class Dispostivos {
     private String configuracion;
     private String modeloDipositivo;
     private String tipoDispositivo;
-    private int ID_Dipositivo;
+    private String ID_Dipositivo;
 
-    public int getID_Dipositivo() {
+    public String getID_Dipositivo() {
         return ID_Dipositivo;
     }
 
-    public void setID_Dipositivo(int ID_Dipositivo) {
+    public void setID_Dipositivo(String ID_Dipositivo) {
         this.ID_Dipositivo = ID_Dipositivo;
     }
 
@@ -60,7 +60,7 @@ public class Dispostivos {
         sb.append(ID_Dipositivo);
         sb.append("\n Modelo de dipositivo: ");
         sb.append(modeloDipositivo);
-        sb.append("\n Tipo de Dispositivo:) ");
+        sb.append("\n Tipo de Dispositivo: ");
         sb.append(tipoDispositivo);
         sb.append("\n Ip Dipositivo: ");
         sb.append(ip_Dispositivo);

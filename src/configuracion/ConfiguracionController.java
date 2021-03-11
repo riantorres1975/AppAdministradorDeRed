@@ -60,36 +60,32 @@ public class ConfiguracionController implements Initializable {
 
     public void BuscarDipos() {
 
-        if (dispostivos.indexOf(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1) != -1) {
+        if (!dispostivos.isEmpty()) {
             datos = dispostivos.get(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1).toString();
             historialConfig.setText(datos);
+
         } else {
-            System.out.println("No se encontro..!" + dispostivos.size());
+            System.out.println("Lista vacia..!" + dispostivos.size());
+        }
+        txt_ID_Dipositivo.setText(" ");
+    }
+
+    public void BorrarDipos() {
+
+        if (!dispostivos.isEmpty()) {
+            dispostivos.remove(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1);
             historialConfig.clear();
             mostrarDipositivos();
 
-        }
-        txt_ID_Dipositivo.setText(" ");
-    }
-
-    public void BorrarDipositivo() {
-        if (dispostivos.indexOf(Integer.parseInt(txt_ID_Dipositivo.getText()) - 1) != -1) {
-            dispostivos.remove(txt_ID_Dipositivo.getText());
-            System.out.println("Borrado");
-            mostrarDipositivos();
         } else {
-            System.out.println("No se encontro..!" + dispostivos.size());
-            mostrarDipositivos();
-
+            System.out.println("Lista vacia..!" + dispostivos.size());
         }
         txt_ID_Dipositivo.setText(" ");
-
     }
 
-    //Método para leer coches e introducirlos en el array
     public void agregarConfiguracion() {
 
-        int ID_Dispositivo;
+        String ID_Dispositivo;
         String ip_Dispositivo;
         String configuracion;
         String modeloDipositivo;
@@ -98,7 +94,7 @@ public class ConfiguracionController implements Initializable {
         //Variable auxiliar que contendrá la referencia a cada dipositivo nuevo.
         Dispostivos aux;
 
-        ID_Dispositivo = contador;
+        ID_Dispositivo = String.valueOf(contador + 1);
         ip_Dispositivo = txt_ipDispositivo.getText();
         configuracion = txt_configDipositivo.getText();
         modeloDipositivo = txt_modeloDipostipo.getText();
@@ -117,6 +113,7 @@ public class ConfiguracionController implements Initializable {
         dispostivos.add(aux);
 
     }//fin método 
+
 
     public void mostrarDipositivos() {
 
