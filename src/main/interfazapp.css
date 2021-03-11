@@ -1,7 +1,38 @@
 /*
  * Empty Stylesheet file.
  */
+* {
+    -fx-primary: #2a2e37;
+    -fx-secondary: #ffff8d;
+    -fx-primarytext: #b2b2b2;
+}
+.mainFxmlClass{
+    -fx-background-color:-fx-primary;
+}
+.label{
+    -fx-text-fill: white;
+    -fx-opacity: 0.8; 
+    -fx-background-radius: 18 18 18 18;
+    -fx-effect: dropshadow(three-pass-box, #006064, 10, 0.0, 4, 5);
 
-.mainFxmlClass {
+}
+.glyph-icon{
 
+    -fx-fill: #006064;
+}
+
+.button{
+    -fx-text-fill: white;
+    -fx-border-color: #006064;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+
+}
+.button:hover{
+    -fx-background-color: #006064;
+    -fx-text-fill:#2a2e37;
+    -fx-border-color: #006064;
+}
+.jfx-text-field, .jfx-password-field {
+    -fx-text-fill: white;
 }

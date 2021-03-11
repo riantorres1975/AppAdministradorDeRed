@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -9,33 +15,27 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1366.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="main.InterfazAppController">
+<AnchorPane id="AnchorPane" prefHeight="411.0" prefWidth="333.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.InterfazAppController">
     <stylesheets>
         <URL value="@interfazapp.css" />
     </stylesheets>
    <children>
-      <VBox alignment="TOP_CENTER" layoutX="-2.0" prefHeight="768.0" prefWidth="1366.0" spacing="50.0">
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
-               <font>
-                  <Font name="Times New Roman" size="40.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Text>
-            <Button fx:id="prueba_btn" mnemonicParsing="false" onAction="#probarBoton" text="Button">
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <font>
-                  <Font name="Times New Roman" size="96.0" />
-               </font>
-            </Button>
-         </children>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </VBox>
+      <JFXTextField fx:id="txt_user" focusColor="#006064" labelFloat="true" layoutX="59.0" layoutY="242.0" maxWidth="281.0" minWidth="233.0" prefHeight="32.0" prefWidth="233.0" promptText="Usuario">
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txt_pass" focusColor="#006064" labelFloat="true" layoutX="63.0" layoutY="291.0" maxWidth="267.0" minWidth="225.0" prefHeight="32.0" prefWidth="225.0" promptText="Contraseña">
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton layoutX="125.0" layoutY="344.0" onAction="#entrar" prefHeight="27.0" prefWidth="73.0" text="Login">
+         <font>
+            <Font size="15.0" />
+         </font></JFXButton>
+      <FontAwesomeIconView glyphName="SKYATLAS" layoutX="75.0" layoutY="182.0" size="160" />
+      <FontAwesomeIconView glyphName="USER" layoutX="29.0" layoutY="262.0" size="30" />
+      <FontAwesomeIconView glyphName="KEY" layoutX="26.0" layoutY="309.0" size="30" />
    </children>
 </AnchorPane>

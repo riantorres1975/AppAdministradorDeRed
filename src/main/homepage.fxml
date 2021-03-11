@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="346.0" styleClass="mainFxmlClass" stylesheets="@homepage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.HomepageController">
+   <children>
+      <JFXButton fx:id="search" layoutX="69.0" layoutY="182.0" onAction="#search_dispo" prefHeight="37.0" prefWidth="208.0" text="Localizar Dispositivo">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="SEARCH" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="inventario" layoutX="66.0" layoutY="258.0" onAction="#ir_inventario" prefHeight="37.0" prefWidth="208.0" text="Inventario">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fx:id="inventario" glyphName="BRIEFCASE" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="ajustes" layoutX="66.0" layoutY="325.0" onAction="#ir_ajustes" prefHeight="37.0" prefWidth="208.0" text="Ajustes">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fx:id="ajustes" glyphName="COGS" size="25" />
+         </graphic>
+      </JFXButton>
+      <FontAwesomeIconView fx:id="home" glyphName="HOME" layoutX="143.0" layoutY="75.0" size="60" />
+      <JFXButton fx:id="bugs" layoutX="69.0" layoutY="109.0" onAction="#registro_fallas" prefHeight="37.0" prefWidth="208.0" text="Registro de Fallas">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fx:id="img_bug" glyphName="BUG" size="25" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
