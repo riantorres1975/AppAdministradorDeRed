@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ContextMenu?>
@@ -9,15 +15,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="338.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Registro_Falla.RegistroController">
+<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="338.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Registro_Falla.RegistroController">
     <stylesheets>
         <URL value="@registro.css" />
     </stylesheets>
    <children>
-      <Button fx:id="agregar" layoutX="124.0" layoutY="293.0" mnemonicParsing="false" onAction="#boton_agregar" text="Agregar " />
-      <TextArea fx:id="descri" layoutX="32.0" layoutY="71.0" prefHeight="214.0" prefWidth="248.0" promptText="Descripcion" />
-      <Button layoutX="84.0" layoutY="332.0" mnemonicParsing="false" onAction="#boton_historial" prefHeight="40.0" prefWidth="143.0" text="Ver Registros de Fallas" />
-      <SplitMenuButton fx:id="barra_menu" layoutX="61.0" layoutY="31.0" mnemonicParsing="false" prefWidth="188.0" text="Selecciona Tipo de Falla" textAlignment="CENTER">
+      <Button fx:id="agregar" layoutX="124.0" layoutY="336.0" mnemonicParsing="false" onAction="#boton_agregar" text="Agregar " />
+      <TextArea fx:id="descri" layoutX="45.0" layoutY="102.0" prefHeight="214.0" prefWidth="248.0" promptText="Descripcion">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font></TextArea>
+      <Button layoutX="79.0" layoutY="380.0" mnemonicParsing="false" onAction="#boton_historial" prefHeight="40.0" prefWidth="166.0" text="Ver Registros de Fallas" />
+      <SplitMenuButton fx:id="barra_menu" layoutX="75.0" layoutY="50.0" mnemonicParsing="false" prefWidth="188.0" text="Selecciona Tipo de Falla" textAlignment="CENTER" textFill="#2c2a2a">
         <items>
           <MenuItem mnemonicParsing="false" onAction="#falla_dispositivo" text="Falla del Dispositivo " />
           <MenuItem mnemonicParsing="false" onAction="#falla_externa" text="Falla Externa " />
@@ -30,5 +39,10 @@
             <Font size="13.0" />
          </font>
       </SplitMenuButton>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btn_back">
+         <graphic>
+            <FontAwesomeIconView glyphName="ARROW_LEFT" size="20" />
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

@@ -1,0 +1,70 @@
+
+* {
+    -fx-primary: #2a2e37;
+    -fx-secondary: #ffff8d;
+    -fx-primarytext: #b2b2b2;
+}
+.mainFxmlClass{
+    -fx-background-color:-fx-primary;
+}
+
+.label{
+    -fx-text-fill: white;
+    -fx-opacity: 0.8; 
+    -fx-background-radius: 18 18 18 18;
+    -fx-effect: dropshadow(three-pass-box, #006064, 10, 0.0, 4, 5);
+}
+
+.glyph-icon{
+    -fx-fill: white;
+}
+
+#home{
+    -fx-fill: #006064;
+}
+#bugs{
+    -fx-border-color: #EC7063;
+}
+
+#bugs:hover{
+    -fx-background-color: #EC7063;
+    -fx-border-color: #EC7063;
+}
+
+.jfx-text-field, .jfx-password-field {
+    -fx-text-fill: white;
+}
+
+#ajustes{
+    -fx-border-color: #2E86C1 ;
+}
+#ajustes:hover{
+    -fx-background-color:#2E86C1 ;
+    -fx-border-color:#2E86C1 ;
+}
+
+#search{
+    -fx-border-color:#8E44AD;
+}
+#search:hover{
+    -fx-background-color:#8E44AD;
+    -fx-border-color:#8E44AD;
+}
+
+#inventario{
+    -fx-border-color:#28B463;
+}
+
+#inventario:hover{
+    -fx-background-color:#28B463;
+    -fx-border-color:#28B463;
+}
+
+.button{
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-text-fill: white;
+}
+.button:hover{
+    -fx-text-fill:#2a2e37;
+}

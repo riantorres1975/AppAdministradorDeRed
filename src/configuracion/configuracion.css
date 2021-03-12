@@ -1,7 +1,56 @@
-/*
- * Empty Stylesheet file.
- */
 
-.mainFxmlClass {
+* {
+    -fx-primary: #2a2e37;
+    -fx-secondary: #ffff8d;
+    -fx-primarytext: #b2b2b2;
+}
+.mainFxmlClass{
+    -fx-background-color:-fx-primary;
+}
+
+#titulo{
+    -fx-text-fill: white;
+    -fx-opacity: 0.8; 
+    -fx-background-radius: 18 18 18 18;
+    -fx-effect: dropshadow(three-pass-box, #2E86C1, 10, 0.0, 4, 5);
+}
+
+.glyph-icon{
+    -fx-fill: white;
+}
+
+.button{
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-text-fill: white;
+    -fx-border-color:#2E86C1;
+    -fx-background-color:-fx-primary;
+    -fx-font-family: 'Century Gothic';
+    -fx-font-size: 15 pt;
+}
+.button:hover{
+    -fx-text-fill:#2a2e37;
+    -fx-background-color:#2E86C1;
+    -fx-border-color:#2E86C1;
+}
+
+.text-area .content {
+    -fx-background-color:#2E86C1;
+}
+
+.label{
+    -fx-text-fill: white;
+    -fx-opacity: 0.8; 
+    -fx-background-radius: 18 18 18 18;
+    -fx-effect: dropshadow(three-pass-box,#2E86C1, 10, 0.0, 4, 5);
+
+}
+.text-field{
+     -fx-font-family: 'Consolas';
+    -fx-font-size:  16 pt;
+    -fx-text-fill: white;
+    -fx-opacity: 0.8; 
+    -fx-background-radius: 18 18 18 18;
+    -fx-background-color:#2E86C1;
 
 }
