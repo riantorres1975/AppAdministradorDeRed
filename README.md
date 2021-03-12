@@ -1,6 +1,6 @@
-# Título del Proyecto
+# Proyecto AppAdiministradorDeRed
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Es este proyecto fue creado para ayudar a los administradores de redes. Este proyecto cuenta con varias funciones y herramientas que permitiran desarrollar algunas tareas de forma más eficiente.
 
 ## Comenzando 🚀
 
