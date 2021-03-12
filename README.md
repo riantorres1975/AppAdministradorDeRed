@@ -7,7 +7,7 @@ Es este proyecto fue creado para ayudar a los administradores de redes. Este pro
 * **Alvarez Ordoñez Marco Antonio** - *Manual de usuario* - *Módulo Registro de fallas* - [markoski2](https://github.com/markoski2)
 * **Duran Linares Ana Valeria** - *Manual de usuario* - *Módulo Innventario* - [ValeDuli](https://github.com/ValeDuli)
 * **Rivera Torres Jose Antonio** - *Manual de usuario* - *Módulo Configuración* - [whoamiLiinux](https://github.com/whoamiLiinux)
-* **Valentin Castro Edgar Gerardo** - *Manual de usuario* - *Módulo Localización de Dipositivos* - [EdgerardV](https://github.com/EdgerardV)
+* **Valentin Castro Edgar Gerardo** - *Manual de usuario* - *Módulo Localización de Dispositivos* - [EdgerardV](https://github.com/EdgerardV)
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
