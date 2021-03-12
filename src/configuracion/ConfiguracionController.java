@@ -5,14 +5,21 @@
  */
 package configuracion;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -40,6 +47,7 @@ public class ConfiguracionController implements Initializable {
     int contador = 0;
     String datos = "";
 
+    @FXML
     public void btnAgregar() {
 
         agregarConfiguracion();
@@ -58,6 +66,7 @@ public class ConfiguracionController implements Initializable {
 
     }
 
+    @FXML
     public void BuscarDipos() {
 
         if (!dispostivos.isEmpty()) {
@@ -114,7 +123,6 @@ public class ConfiguracionController implements Initializable {
 
     }//fin método 
 
-
     public void mostrarDipositivos() {
 
         for (int i = contador; i < dispostivos.size(); i++) {
@@ -136,6 +144,16 @@ public class ConfiguracionController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
+    }
+
+    @FXML
+    private void btn_back(ActionEvent event) throws IOException {
+        Stage primaryStage = new Stage();
+        Parent raiz = FXMLLoader.load(getClass().getResource("/main/homepage.fxml"));
+        Scene escena = new Scene(raiz);
+        primaryStage.setScene(escena);
+        primaryStage.show();
+        ((Node) (event.getSource())).getScene().getWindow().hide();
     }
 
 }

@@ -8,9 +8,11 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -34,8 +36,11 @@ public class LocalizarDispositivosFXMLController implements Initializable {
 	TableColumn<DispositivoItem, String> _HostAddress = new TableColumn<>();
 
 	//Lista de los datos que se mostrarán en la tabla
-	@FXML
 	ObservableList<DispositivoItem> datos;
+    @FXML
+    private Text titulo;
+    @FXML
+    private Button btn_e;
 
 	//private int mostrar = 0;
 

@@ -44,7 +44,7 @@ public class InventarioController implements Initializable {
     @FXML
     private void Back (ActionEvent ev) throws IOException{
         Stage primaryStage=new Stage();
-            Parent raiz=FXMLLoader.load (getClass().getResource("/main/interfazApp.fxml"));
+            Parent raiz=FXMLLoader.load (getClass().getResource("/main/homepage.fxml"));
             Scene escena=new Scene(raiz);
             primaryStage.setScene(escena);
             primaryStage.show();

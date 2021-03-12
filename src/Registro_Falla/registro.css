@@ -1,7 +1,41 @@
-/*
- * Empty Stylesheet file.
- */
 
-.mainFxmlClass {
-
+* {
+    -fx-primary: #2a2e37;
+    -fx-secondary: #ffff8d;
+    -fx-primarytext: #b2b2b2;
 }
+.mainFxmlClass{
+    -fx-background-color:-fx-primary;
+}
+
+#titulo{
+    -fx-text-fill: white;
+    -fx-opacity: 0.8; 
+    -fx-background-radius: 18 18 18 18;
+    -fx-effect: dropshadow(three-pass-box, #006064, 10, 0.0, 4, 5);
+}
+
+.glyph-icon{
+    -fx-fill: white;
+}
+
+
+.button{
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-text-fill: white;
+    -fx-border-color:#EC7063;
+    -fx-background-color:-fx-primary;
+    -fx-font-family: 'Century Gothic';
+    -fx-font-size: 13 pt;
+}
+.button:hover{
+    -fx-text-fill:#2a2e37;
+    -fx-background-color:#EC7063;
+    -fx-border-color:#EC7063;
+}
+
+.text-area .content {
+    -fx-background-color:  #EC7063;
+}
+
