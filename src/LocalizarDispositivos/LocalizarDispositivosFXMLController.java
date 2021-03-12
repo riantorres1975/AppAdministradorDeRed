@@ -20,7 +20,9 @@ import javafx.scene.text.Text;
  * @author Edgerard
  */
 public class LocalizarDispositivosFXMLController implements Initializable {
-
+	//	Declaración del hilo del escaner
+	private Thread hiloEscaner;
+	
 	// TableView FXML
 	@FXML
 	private TableView<DispositivoItem> tabla = new TableView();
@@ -34,6 +36,9 @@ public class LocalizarDispositivosFXMLController implements Initializable {
 	TableColumn<DispositivoItem, String> _HostName = new TableColumn<>();
 	@FXML
 	TableColumn<DispositivoItem, String> _HostAddress = new TableColumn<>();
+	
+	@FXML
+	Text escan_msg_txt = new Text();
 
 	//Lista de los datos que se mostrarán en la tabla
 	ObservableList<DispositivoItem> datos;
@@ -41,8 +46,6 @@ public class LocalizarDispositivosFXMLController implements Initializable {
     private Text titulo;
     @FXML
     private Button btn_e;
-
-	//private int mostrar = 0;
 
 	/**
 	 * Initializes the controller class.
@@ -62,16 +65,13 @@ public class LocalizarDispositivosFXMLController implements Initializable {
 
 		datos = FXCollections.observableArrayList();
 
-		cargarDatos();	// Método que ejecuta la función que extrae los dispositivos
-
 		tabla.setItems(datos);	// Se asignan los datos a la tabla
-
-		// Método para definir la acción que se realizará al seleccionar un elemento de la tabla
-		tabla.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> mostrarDatos(newValue));
 	}
 
 	private void cargarDatos() {	// Ejecuta el método para extraer los datos de la red
 		try {
+			datos.clear();	//	Elimina los datos previos que se encuentren en la lista
+			
 			// Lista que guarda los dispositivos obtenidos del escaner de la red
 			ArrayList<DispositivoItem> lista = NetworkScaner.getListaDispositivos();
 			
@@ -79,18 +79,29 @@ public class LocalizarDispositivosFXMLController implements Initializable {
 			for(DispositivoItem tmp : lista){
 				datos.add(tmp);
 			}
+			
+			escan_msg_txt.setVisible(false); //	Vuelve invisible el mensaje de escaneo
 		} catch (Exception ex) {
 			System.out.println("Error al cargar los datos \n" + ex);
 		}
-	}
-
-	private void mostrarDatos(DispositivoItem aux) { // Método que se ejecuta cuando se selecciona un elemento en la tabla (no implementado)
 	}
 	
 	// Método que se utiliza para actualizar los datos mediante el botón "escanear"
 	@FXML
 	public void escanearDispositivos(ActionEvent ev) {
-		datos.clear();
-		cargarDatos();
+		escan_msg_txt.setVisible(true);	//	Vuelve visible el mensaje de escaneo
+		
+		// Inicia el proceso de escanear en un hilo aparte
+		inicializarHiloEscaner();
+	}
+	
+	private void inicializarHiloEscaner(){
+		hiloEscaner = new Thread(){
+			@Override
+			public void run(){
+				cargarDatos();
+			}
+		};
+		hiloEscaner.start();
 	}
 }
