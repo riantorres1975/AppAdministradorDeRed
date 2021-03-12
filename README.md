@@ -9,7 +9,7 @@ Es este proyecto fue creado para ayudar a los administradores de redes. Este pro
 * **Rivera Torres Jose Antonio** - *Manual de usuario* - *Módulo Configuración* - [whoamiLiinux](https://github.com/whoamiLiinux)
 * **Valentin Castro Edgar Gerardo** - *Manual de usuario* - *Módulo Localización de Dispositivos* - [EdgerardV](https://github.com/EdgerardV)
 
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/whoamiLiinux/AppAdministradorDeRed/graphs/contributors) quíenes han participado en este proyecto. 
 
 ## Licencia 📄
 Este proyecto está bajo la Licencia ( GNU GENERAL PUBLIC LICENSE) - mira el archivo [LICENSE.md](LICENSE) para detalles
