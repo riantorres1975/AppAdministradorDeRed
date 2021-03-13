@@ -15,4 +15,4 @@ También puedes mirar la lista de todos los [contribuyentes](https://github.com/
 Este proyecto está bajo la Licencia ( GNU GENERAL PUBLIC LICENSE) - mira el archivo [LICENSE.md](LICENSE) para detalles
 
 ## Manual de usuario 📄
-[Manual de usuario](https://docs.google.com/document/d/18bzOoG3pksT3C837LgXfDWbu_cMmYhW0L8T5sm_FMm4/edit)
+[Manual de usuario](https://docs.google.com/document/d/18bzOoG3pksT3C837LgXfDWbu_cMmYhW0L8T5sm_FMm4/edithttps://docs.google.com/document/d/18bzOoG3pksT3C837LgXfDWbu_cMmYhW0L8T5sm_FMm4/edit?usp=sharing)
